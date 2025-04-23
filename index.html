@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transforme Sua Mente, Transforme Suas Finanças | O Ebook que Mudará sua Vida Financeira</title>
+    <style>
+        :root {
+            --black: #000000;
+            --gold: #D4AF37;
+            --gold-light: #F4CD6C;
+            --white: #FFFFFF;
+            --dark-gray: #1A1A1A;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--white);
+            background-color: var(--black);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Section */
+        header {
+            background: linear-gradient(to bottom, var(--black), var(--dark-gray));
+            padding: 20px 0;
+            border-bottom: 2px solid var(--gold);
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="black"/><circle cx="50" cy="50" r="40" stroke="gold" stroke-width="0.5" fill="none"/></svg>');
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.2) 0%, rgba(0, 0, 0, 0.9) 70%);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--white);
+            text-shadow: 0 0 10px var(--gold), 0 0 20px var(--gold-light);
+            line-height: 1.2;
+        }
+        
+        .hero h1 span {
+            color: var(--gold);
+            display: block;
+            font-size: 4rem;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            color: var(--black);
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.6);
+        }
+        
+        .book-cover {
+            max-width: 350px;
+            margin: 40px auto;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            border: 3px solid var(--gold);
+            transition: transform 0.5s ease;
+        }
+        
+        .book-cover:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Problem Section */
+        .problem {
+            padding: 80px 0;
+            background-color: var(--dark-gray);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+            color: var(--gold);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: var(--gold);
+            margin: 15px auto;
+        }
+        
+        .problem-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .problem-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-left: 3px solid var(--gold);
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        
+        .problem-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--gold-light);
+        }
+        
+        /* Solution Section */
+        .solution {
+            padding: 80px 0;
+            background-color: var(--black);
+        }
+        
+        .solution-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .solution-text {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        
+        .solution-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .solution-image img {
+            max-width: 100%;
+            border: 2px solid var(--gold);
+            border-radius: 10px;
+        }
+        
+        .gold-text {
+            color: var(--gold);
+            font-weight: bold;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 80px 0;
+            background-color: var(--dark-gray);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .benefit-card {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+        }
+        
+        .benefit-icon {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--gold-light);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 0;
+            background-color: var(--black);
+        }
+        
+        .testimonial-card {
+            background-color: rgba(26, 26, 26, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            position: relative;
+            border-left: 3px solid var(--gold);
+        }
+        
+        .testimonial-card::before {
+            content: """;
+            font-size: 5rem;
+            color: rgba(212, 175, 55, 0.2);
+            position: absolute;
+            top: -20px;
+            left: 10px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--gold);
+        }
+        
+        /* Chapters Section */
+        .chapters {
+            padding: 80px 0;
+            background-color: var(--dark-gray);
+        }
+        
+        .chapter-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .chapter-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .chapter-item:hover {
+            transform: translateX(10px);
+            background-color: rgba(0, 0, 0, 0.5);
+            border-left: 3px solid var(--gold);
+        }
+        
+        .chapter-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--gold);
+        }
+        
+        .chapter-quote {
+            font-style: italic;
+            color: var(--gold-light);
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 2px solid var(--gold);
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            padding: 80px 0;
+            background-color: var(--black);
+            text-align: center;
+        }
+        
+        .price-tag {
+            font-size: 4rem;
+            color: var(--gold);
+            margin: 20px 0;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+        
+        .price-tag small {
+            font-size: 1.5rem;
+            vertical-align: super;
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .guarantee {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: rgba(26, 26, 26, 0.8);
+            border-radius: 10px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid var(--gold);
+        }
+        
+        .guarantee h3 {
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background-color: var(--dark-gray);
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            padding-bottom: 20px;
+        }
+        
+        .faq-question {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--gold);
+            font-weight: bold;
+        }
+        
+        /* Final CTA Section */
+        .final-cta {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--dark-gray), var(--black));
+            position: relative;
+        }
+        
+        .final-cta::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.2) 0%, rgba(0, 0, 0, 0.9) 70%);
+            z-index: 1;
+        }
+        
+        .final-cta-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .final-cta h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: var(--white);
+        }
+        
+        .final-cta h2 span {
+            color: var(--gold);
+            display: block;
+        }
+        
+        .countdown {
+            font-size: 2rem;
+            margin: 30px 0;
+            color: var(--gold);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--black);
+            padding: 40px 0;
+            text-align: center;
+            border-top: 2px solid var(--gold);
+        }
+        
+        .footer-links {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: var(--gold);
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero h1 span {
+                font-size: 3rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .price-tag {
+                font-size: 3rem;
+            }
+            
+            .final-cta h2 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        /* Animation */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 10px 20px rgba(212, 175, 55, 0.6);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+            }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Gold particles effect */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background-color: var(--gold);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 15s infinite linear;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.3;
+            }
+            90% {
+                opacity: 0.3;
+            }
+            100% {
+                transform: translateY(-1000px) translateX(100px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">TRANSFORMAÇÃO FINANCEIRA</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="particles" id="particles"></div>
+        <div class="container hero-content">
+            <h1>Descubra o Segredo que <span>Transforma sua Mente e suas Finanças</span> para Sempre</h1>
+            <p>O ebook revolucionário que já ajudou milhares de pessoas a reprogramar sua mentalidade e alcançar a liberdade financeira que sempre sonharam</p>
+            <img src="capa_ebook.png" alt="Capa do Ebook Transforme Sua Mente, Transforme Suas Finanças" class="book-cover">
+            <a href="#pricing" class="cta-button pulse">QUERO TRANSFORMAR MINHA VIDA FINANCEIRA AGORA!</a>
+        </div>
+    </section>
+
+    <section class="problem">
+        <div class="container">
+            <h2 class="section-title">Você se Identifica com Alguma Dessas Situações?</h2>
+            <div class="problem-list">
+                <div class="problem-item">
+                    <h3>Trabalha duro, mas o dinheiro parece escapar pelos dedos?</h3>
+                    <p>Você se esforça, trabalha longas horas, mas no final do mês, mal consegue pagar as contas. Parece que não importa o quanto você se dedique, a prosperidade financeira continua sendo apenas um sonho distante.</p>
+                </div>
+                <div class="problem-item">
+                    <h3>Sente que está preso em um ciclo de escassez financeira?</h3>
+                    <p>Toda vez que começa a juntar algum dinheiro, surge uma emergência que drena suas economias. É como se existisse uma força invisível impedindo você de acumular riqueza.</p>
+                </div>
+                <div class="problem-item">
+                    <h3>Observa outras pessoas prosperando e se pergunta: "Por que não eu?"</h3>
+                    <p>Você vê pessoas com habilidades semelhantes às suas alcançando sucesso financeiro e se pergunta o que elas têm que você não tem. A resposta pode surpreendê-lo...</p>
+                </div>
+                <div class="problem-item">
+                    <h3>Já tentou diversas estratégias financeiras sem resultados duradouros?</h3>
+                    <p>Planilhas de orçamento, aplicativos de economia, cursos de investimentos... Você já tentou de tudo, mas os resultados nunca parecem durar. Algo fundamental está faltando na equação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solution">
+        <div class="container">
+            <h2 class="section-title">A Verdade que Ninguém te Contou Sobre Dinheiro</h2>
+            <div class="solution-content">
+                <div class="solution-text">
+                    <p>Se você se identificou com alguma das situações acima, preciso que entenda algo crucial: <span class="gold-text">o problema não está nas estratégias financeiras que você usa, mas na mentalidade com a qual você as aplica.</span></p>
+                    <p>Estudos da Universidade de Harvard revelaram que <span class="gold-text">85% do sucesso financeiro de uma pessoa está relacionado a fatores de mentalidade</span>, e apenas 15% ao conhecimento técnico.</p>
+                    <p>Isso significa que você pode dominar todas as técnicas de investimento do mundo, mas se sua mente estiver programada com crenças limitantes sobre dinheiro, você continuará sabotando seu próprio sucesso.</p>
+                    <p>A boa notícia? <span class="gold-text">Sua mentalidade pode ser reprogramada.</span> E quando isso acontece, a transformação financeira ocorre naturalmente, quase como mágica.</p>
+                </div>
+                <div class="solution-image">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><rect width='400' height='400' fill='black'/><circle cx='200' cy='200' r='150' stroke='gold' stroke-width='2' fill='none'/><path d='M150,150 C170,120 230,120 250,150 C270,180 270,220 250,250 C230,280 170,280 150,250 C130,220 130,180 150,150 Z' stroke='gold' stroke-width='2' fill='none'/><line x1='200' y1='100' x2='200' y2='300' stroke='gold' stroke-width='2'/><circle cx='200' cy='200' r='30' stroke='gold' stroke-width='2' fill='none'/></svg>" alt="Transformação Mental e Financeira">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">O Que Você Vai Conquistar Com Este Ebook</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💡</div>
+                    <h3>Clareza Mental</h3>
+                    <p>Identifique e elimine as crenças limitantes sobre dinheiro que estão sabotando seu sucesso financeiro, algumas delas tão sutis que você nem percebe sua influência.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🧠</div>
+                    <h3>Reprogramação Subconsciente</h3>
+                    <p>Aprenda técnicas comprovadas pela neurociência para reprogramar seu subconsciente, criando novos padrões mentais que naturalmente atraem abundância.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Estratégias Práticas</h3>
+                    <p>Domine estratégias de gestão financeira que complementam sua nova mentalidade, criando um sistema completo para construir riqueza de forma consistente.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Plano de Ação Personalizado</h3>
+                    <p>Desenvolva um plano de ação personalizado para transformar sua relação com o dinheiro, com passos claros e adaptados à sua realidade específica.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔄</div>
+                    <h3>Hábitos Transformadores</h3>
+                    <p>Cultive hábitos diários que fortalecem sua mentalidade de abundância e criam um ciclo virtuoso de prosperidade em todas as áreas da sua vida.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Resiliência Financeira</h3>
+                    <p>Desenvolva a capacidade de enfrentar desafios financeiros com confiança, transformando obstáculos em oportunidades de crescimento e aprendizado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Histórias Reais de Transformação</h2>
+            <div class="testimonial-card">
+                <p class="testimonial-text">Eu sempre acreditei que "dinheiro não dá em árvores" e que "ricos ficam ricos às custas dos pobres". Mesmo após me formar em administração e conseguir um bom emprego, eu inconscientemente sabotava minhas finanças. Após trabalhar minha mentalidade financeira com os princípios deste livro, identifiquei essas crenças limitantes, substituí-as por pensamentos mais capacitantes e, em três anos, dobrei minha renda e comecei a investir consistentemente.</p>
+                <p class="testimonial-author">— Maria S., 34 anos, Administradora</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">Eu vinha de uma família de classe média e tinha habilidades técnicas excepcionais. No entanto, acreditava que "para ganhar dinheiro, é preciso trabalhar muito duro" e que "dinheiro fácil não existe". Essa mentalidade me levou a trabalhar excessivamente por horas, trocando tempo por dinheiro. Ao mudar minha mentalidade para "posso criar sistemas que trabalham para mim", desenvolvi um produto digital que agora gera mais renda do que meu antigo salário, trabalhando menos horas.</p>
+                <p class="testimonial-author">— Carlos M., 41 anos, Engenheiro</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">Antes de transformar minha mentalidade, eu vivia em constante ansiedade financeira. Cada conta que chegava era motivo de pânico. Após aplicar os princípios deste livro, não apenas organizei minhas finanças, mas comecei a ver oportunidades onde antes só via problemas. Em 18 meses, saí das dívidas, criei uma reserva de emergência e iniciei minha jornada de investimentos. A mudança na minha qualidade de vida é indescritível.</p>
+                <p class="testimonial-author">— Ana P., 29 anos, Professora</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="chapters">
+        <div class="container">
+            <h2 class="section-title">O Que Você Vai Encontrar Neste Ebook</h2>
+            <div class="chapter-list">
+                <div class="chapter-item">
+                    <h3>CAPÍTULO 1: A CONEXÃO MENTE-DINHEIRO</h3>
+                    <p>Descubra por que sua mentalidade é seu ativo financeiro mais valioso e como ela influencia diretamente seus resultados financeiros.</p>
+                    <p class="chapter-quote">"O dinheiro é apenas uma ideia." — Robert Kiyosaki</p>
+                </div>
+                <div class="chapter-item">
+                    <h3>CAPÍTULO 2: IDENTIFICANDO E ELIMINANDO CRENÇAS LIMITANTES</h3>
+                    <p>Aprenda a identificar as crenças negativas sobre dinheiro que estão sabotando seu sucesso e técnicas comprovadas para eliminá-las definitivamente.</p>
+                </div>
+                <div class="chapter-item">
+                    <h3>CAPÍTULO 3: DESENVOLVENDO UMA MENTALIDADE DE ABUNDÂNCIA</h3>
+                    <p>Cultive uma perspectiva de abundância que transforma como você vê oportunidades e toma decisões financeiras.</p>
+                    <p class="chapter-quote">"Há oportunidades ilimitadas" e "Dinheiro flui para onde agrega valor"</p>
+                </div>
+                <div class="chapter-item">
+                    <h3>CAPÍTULO 4: REPROGRAMANDO SEU SUBCONSCIENTE</h3>
+                    <p>Técnicas práticas baseadas em neurociência para reprogramar seu subconsciente e criar novos padrões mentais que atraem prosperidade.</p>
+                </div>
+                <div class="chapter-item">
+                    <h3>CAPÍTULO 5: ESTRATÉGIAS PRÁTICAS DE GESTÃO FINANCEIRA</h3>
+                    <p>Domine estratégias de gestão financeira que complementam sua nova mentalidade e maximizam seus resultados.</p>
+                </div>
+                <div class="chapter-item">
+                    <h3>CAPÍTULO 6: SEU PLANO DE AÇÃO PERSONALIZADO</h3>
+                    <p>Crie um plano de ação personalizado para transformar sua relação com o dinheiro, com passos claros e adaptados à sua realidade.</p>
+                </div>
+                <div class="chapter-item">
+                    <h3>CAPÍTULO 7: MANTENDO E EXPANDINDO SUA TRANSFORMAÇÃO</h3>
+                    <p>Estratégias para manter sua nova mentalidade financeira e continuar expandindo sua prosperidade ao longo do tempo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Invista em Sua Transformação Financeira</h2>
+            <p>Quanto vale para você transformar completamente sua relação com o dinheiro e abrir as portas para uma vida de abundância financeira?</p>
+            <p>Muitos cursos sobre finanças custam milhares de reais e focam apenas em técnicas, ignorando o fator mais importante: sua mentalidade.</p>
+            <p class="original-price">De R$ 197,00</p>
+            <p class="price-tag">R$ 97<small>,00</small></p>
+            <p><strong>OFERTA POR TEMPO LIMITADO!</strong></p>
+            <a href="#" class="cta-button pulse">QUERO TRANSFORMAR MINHA VIDA FINANCEIRA AGORA!</a>
+            
+            <div class="guarantee">
+                <h3>Garantia Incondicional de 30 Dias</h3>
+                <p>Se por qualquer motivo você não ficar 100% satisfeito com o conteúdo deste ebook, basta enviar um e-mail dentro de 30 dias após a compra e devolveremos integralmente seu investimento. Sem perguntas, sem burocracia.</p>
+                <p>Isso significa que você pode explorar todo o conteúdo, aplicar as técnicas e avaliar os resultados sem nenhum risco.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <div class="faq-item">
+                <p class="faq-question">Este ebook é apenas sobre "pensar positivo" ou tem conteúdo prático?</p>
+                <p>Definitivamente não é apenas sobre "pensar positivo". Este ebook combina neurociência, psicologia comportamental e princípios financeiros comprovados para oferecer um sistema completo de transformação. Além da parte mental, você receberá estratégias práticas de gestão financeira e um plano de ação personalizado.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question">Quanto tempo leva para ver resultados?</p>
+                <p>Muitos leitores relatam mudanças imediatas em sua percepção sobre dinheiro e oportunidades logo nas primeiras semanas. Resultados financeiros concretos geralmente começam a aparecer entre 30 e 90 dias, dependendo da consistência na aplicação dos princípios. A transformação completa é um processo contínuo que se expande ao longo do tempo.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question">Preciso ter conhecimentos prévios sobre finanças?</p>
+                <p>Não. O ebook foi escrito para ser acessível a qualquer pessoa, independentemente de seu nível de conhecimento financeiro atual. Explicamos todos os conceitos de forma clara e didática, sem jargões complicados.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question">Como recebo o ebook após a compra?</p>
+                <p>Imediatamente após a confirmação do pagamento, você receberá um e-mail com o link para download do ebook em formato PDF, que pode ser lido em qualquer dispositivo (computador, tablet ou smartphone).</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question">E se eu tiver dúvidas durante a leitura?</p>
+                <p>Ao adquirir o ebook, você também ganha acesso a um canal exclusivo de suporte por e-mail, onde poderá enviar suas dúvidas e receber orientações personalizadas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container final-cta-content">
+            <h2>Chegou a Hora de <span>Transformar Sua Mente e Suas Finanças</span></h2>
+            <p>Imagine como seria sua vida daqui a um ano se você começasse a transformar sua mentalidade financeira hoje...</p>
+            <p>Você continuaria preso nos mesmos padrões de escassez e limitação? Ou estaria vivendo uma nova realidade de abundância e prosperidade?</p>
+            <p>A escolha é sua, e o momento de decidir é agora.</p>
+            <a href="#" class="cta-button pulse">SIM! QUERO TRANSFORMAR MINHA VIDA FINANCEIRA HOJE!</a>
+            <p class="countdown">Oferta especial válida por apenas: 24:00:00</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Termos de Uso</a>
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Contato</a>
+            </div>
+            <p class="copyright">© 2025 Transforme Sua Mente, Transforme Suas Finanças. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Criar efeito de partículas douradas
+        document.addEventListener('DOMContentLoaded', function() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Posição aleatória
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100 + 100;
+                
+                // Tamanho aleatório
+                const size = Math.random() * 3 + 1;
+                
+                // Velocidade aleatória
+                const duration = Math.random() * 20 + 10;
+                const delay = Math.random() * 10;
+                
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.animationDuration = `${duration}s`;
+                particle.style.animationDelay = `${delay}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        });
+        
+        // Contador regressivo
+        document.addEventListener('DOMContentLoaded', function() {
+            const countdownElement = document.querySelector('.countdown');
+            let hours = 24;
+            let minutes = 0;
+            let seconds = 0;
+            
+            function updateCountdown() {
+                if (seconds > 0) {
+                    seconds--;
+                } else {
+                    if (minutes > 0) {
+                        minutes--;
+                        seconds = 59;
+                    } else {
+                        if (hours > 0) {
+                            hours--;
+                            minutes = 59;
+                            seconds = 59;
+                        }
+                    }
+                }
+                
+                const formattedHours = String(hours).padStart(2, '0');
+                const formattedMinutes = String(minutes).padStart(2, '0');
+                const formattedSeconds = String(seconds).padStart(2, '0');
+                
+                countdownElement.textContent = `Oferta especial válida por apenas: ${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+                
+                if (hours === 0 && minutes === 0 && seconds === 0) {
+                    clearInterval(countdownInterval);
+                    countdownElement.textContent = 'Oferta encerrada!';
+                }
+            }
+            
+            const countdownInterval = setInterval(updateCountdown, 1000);
+        });
+    </script>
+</body>
+</html>
